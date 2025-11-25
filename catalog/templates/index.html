@@ -1,0 +1,214 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Alətləri Kataloqu</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#">SportZone</a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Ana Səhifə</a></li>
+                    <li><a href="#">Alətlər</a></li>
+                    <li><a href="#">Məqalələr</a></li>
+                    <li><a href="#">Əlaqə</a></li>
+                    <li><a href="#">Haqqımızda</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="categories">
+                <h2>Kateqoriyalar</h2>
+                <div class="category-list">
+                    <div class="category-item">
+                        <div class="fas fa-dumbbell fa-5x"></div>
+                        <span>Qantellər</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="fas fa-weight-hanging fa-5x"></div>
+                        <span>Barbellər</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="fas fa-running fa-5x"></div>
+                        <span>Kardio</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="fas fa-medal fa-5x"></div>
+                        <span>Aksesuarlar</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="fas fa-fire fa-5x"></div>
+                        <span>Trenajorlar</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="fas fa-heart fa-5x"></div>
+                        <span>Rezinlər</span>
+                    </div>
+                </div>
+                <a href="#" class="view-all">Bütün Kateqoriyalara Bax</a>
+            </section>
+
+            <section class="products">
+                <h2 class="section-title">Sadə və Effektiv Məşq Alətləri</h2>
+                <p class="section-subtitle">Hər səviyyəyə uyğun, ən keyfiyyətli idman avadanlıqları.</p>
+
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('{% static 'images/steel_dumbel.png' %}');"></div>
+                        <div class="product-info">
+                            <h3>Premium Qantel Dəsti</h3>
+                            <p class="description">Peşəkar məşqlər üçün yüksək keyfiyyətli qantellər.</p>
+                            <div class="meta">
+                                <span><i class="fas fa-weight-hanging"></i> 20 kq</span>
+                                <span><i class="fas fa-star"></i> 4.8</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('{% static 'images/barbell-png.png' %}');"></div>
+                        <div class="product-info">
+                        
+                            <h3>Premium Ştanq</h3>
+                            <p class="description">Peşəkar məşqlər üçün yüksək keyfiyyətli ştanq.</p>
+                            <div class="meta">
+                                <span><i class="fas fa-weight-hanging"></i> 20kg</span>
+                                <span><i class="fas fa-star"></i> 4.5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('{% static 'images/15-kg-Set-.png' %}');"></div>
+                        <div class="product-info">
+                            <h3>Çəki Daşı</h3>
+                            <p class="description">Sabit dəmir çəki daşı</p>
+                            <div class="meta">
+                                <span><i class="fas fa-fire"></i> 15kg</span>
+                                <span><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('{% static 'images/becnh.png' %}');"></div>
+                        <div class="product-info">
+                            <h3>Bench Masası</h3>
+                            <p class="description">Rahat və möhvəm masa</p>
+                            <div class="meta">
+                                <span><i class="fas fa-fire"></i> 15kg</span>
+                                <span><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('{% static 'images/resistance.png' %}');"></div>
+                        <div class="product-info">
+                            <h3>Müqavimət Rezinləri Dəsti</h3>
+                            <p class="description">Müxtəlif səviyyəli müqavimət üçün rezinlər.</p>
+                            <div class="meta">
+                                <span><i class="fas fa-running"></i> Fitnes</span>
+                                <span><i class="fas fa-star"></i> 4.7</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('{% static 'images/runforestrun.png' %}');"></div>
+                        <div class="product-info">
+                            <h3>Professional Qaşış Maşını</h3>
+                            <p class="description">Ağır çəki qaldırma məşqləri üçün barbel.</p>
+                            <div class="meta">
+                                <span><i class="fas fa-running"></i> Yüngül Atletika</span>
+                                <span><i class="fas fa-star"></i> 4.6</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('{% static 'images/yogamat.png' %}');"></div>
+                        <div class="product-info">
+                            <h3>Yoga və Pilates Matı</h3>
+                            <p class="description">Rahat və sürüşməyən məşq matı.</p>
+                            <div class="meta">
+                                <span><i class="fas fa-spa"></i> Rahatlıq</span>
+                                <span><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('{% static 'images/bottle.png' %}');"></div>
+                        <div class="product-info">
+                            <h3>İdman Butulkası</h3>
+                            <p class="description">Su için.</p>
+                            <div class="meta">
+                                <span><i class="fas fa-home"></i> Ləvazimat</span>
+                                <span><i class="fas fa-star"></i> 4.4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="newsletter">
+                <div class="newsletter-box">
+                    <div class="content">
+                        <h2>Məşq Məlumatları Sizin İnboxunuzda</h2>
+                        <p>Ən son məşq proqramları, endirimlər və məqalələr üçün abunə olun.</p>
+                        <form class="subscribe-form">
+                            <input type="email" placeholder="E-poçt ünvanınızı daxil edin">
+                            <button type="submit">Abunə Ol</button>
+                        </form>
+                    </div>
+                    <div class="newsletter-image">
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">SportZone</div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="#">Alətlər</a></li>
+                        <li><a href="#">Məqalələr</a></li>
+                        <li><a href="#">Əlaqə</a></li>
+                        <li><a href="#">Haqqımızda</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 SportZone. Bütün hüquqlar qorunur.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

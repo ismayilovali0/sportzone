@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }} Detalları</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .detail-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 30px;
+        }
+        .detail-image {
+            flex: 1;
+            min-width: 300px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 400px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+        .detail-info {
+            flex: 2;
+        }
+        .detail-info h1 {
+            font-size: 2.5em;
+            margin-top: 0;
+            color: #333;
+        }
+        .detail-info p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+        }
+        .detail-meta {
+            margin-top: 20px;
+            padding: 15px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            gap: 20px;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .detail-meta span i {
+            color: #d6d6d6;
+            margin-right: 5px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #415a77;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-link:hover {
+            background-color: #415a77;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="{% url 'index' %}">SportZone</a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="{% url 'index' %}">Ana Səhifə</a></li>
+                    <li><a href="#">Alətlər</a></li>
+                    <li><a href="#">Məqalələr</a></li>
+                    <li><a href="#">Əlaqə</a></li>
+                    <li><a href="#">Haqqımızda</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="detail-container">
+            <div class="detail-image" style="background-image: url('{% static product.image_url %}');"></div>
+            <div class="detail-info">
+                <h1>{{ product.name }}</h1>
+                <div class="detail-meta">
+                    <span><i class="fas fa-tag"></i> Kateqoriya: {{ product.category }}</span>
+                    <span><i class="fas fa-info-circle"></i> Xüsusiyyət: {{ product.meta_info }}</span>
+                    <span><i class="fas fa-star"></i> Reytinq: {{ product.rating }}</span>
+                </div>
+                <p>{{ product.description }}</p>
+                <a href="{% url 'index' %}" class="back-link">Ana Səhifəyə Qayıt</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">SportZone</div>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="#">Alətlər</a></li>
+                        <li><a href="#">Məqalələr</a></li>
+                        <li><a href="#">Əlaqə</a></li>
+                        <li><a href="#">Haqqımızda</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 SportZone. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
